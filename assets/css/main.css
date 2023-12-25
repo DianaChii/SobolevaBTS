@@ -1689,10 +1689,6 @@ section > :last-child,
         text-shadow: 1px 1px 1px white;
     }
 
-    #header {
-        display: none;
-    }
-
     #banner {
         position: relative;
         color: #fff;
