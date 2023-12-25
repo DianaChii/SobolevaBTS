@@ -1362,6 +1362,46 @@ section > :last-child,
     box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.75), inset 0px 2px 0px 0px rgba(255, 192, 192, 0.5), inset 0px 0px 0px 2px rgba(255, 96, 96, 0.85), 3px 3px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
+.kpop-fandom {
+    position: absolute;
+    bottom: 92px;
+    left: 99px;
+    width: 0px;
+    height: 0px;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: purple;
+  
+  }
+  
+  .top-semicircle {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border: 5px solid #8e0ed8; 
+    border-bottom: 0;
+  }
+  
+  .bottom-semicircle {
+    position: absolute;
+    top: 38px;
+    width: 80px;
+    height: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 5px solid #521cd1; 
+    border-top: 0;
+  }
+
 #content .quote-list li {
     border-bottom: solid 1px #e2e6e8;
 }
@@ -1387,6 +1427,39 @@ section > :last-child,
 #footer .check-list li {
     border-top: solid 1px #e0e4e6;
     border-bottom: solid 1px #b5bec3;
+}
+
+#callback {
+    width: 300px;
+    height: 150px;
+    background-color: grey;
+    position: fixed;
+    bottom: 14px;
+    transform: translateX(-100%);
+}
+
+#callback p {
+    color: #fff;
+    padding: 7px;
+}
+
+#callback:after {
+    content: 'Обратная связь';
+    background-color: darkgrey;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 0;
+    width: 150px;
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+}
+
+#callback:hover {
+    transform: translateX(0%);
+    transition: all 0.7s ease;
 }
 
 @media screen and (min-width: 737px) {
@@ -1624,6 +1697,32 @@ section > :last-child,
         margin: 0 0 1.25em 0;
     }
 
+    .kpop-fandom {
+        bottom: 87.5px;
+        left: 74.5px;
+    }
+
+    .circle {
+        top: 2px;
+        left: 1.5px;
+        width: 69px;
+        height: 69px;
+      }
+      
+      .top-semicircle {
+        width: 72px;
+        height: 36px;
+        border-top-left-radius: 36px;
+        border-top-right-radius: 36px;
+      }
+      
+      .bottom-semicircle {
+        top: 34px;
+        width: 72px;
+        height: 36px;
+        border-bottom-left-radius: 36px;
+        border-bottom-right-radius: 36px;
+      }
 }
 
 #navPanel,
@@ -1689,10 +1788,51 @@ section > :last-child,
         text-shadow: 1px 1px 1px white;
     }
 
+    #header {
+        min-height: 100px;
+        height: auto;
+        position: relative;
+    }
+
+    #header h1 {
+        margin: 25px 0;
+        position: relative;
+        font-size: 2em;
+    }
+
+    #header h1 a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #header nav {
+        position: relative;
+        left: 0;
+        bottom: 5px;
+        font-weight: 200;
+    }
+
+    #header nav a {
+        color: #c6c8c8;
+        text-decoration: none;
+        font-size: 1.4em;
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 10px;
+        display: inline-block;
+        outline: 0;
+    }
+
+    #header nav a:hover {
+        color: #f6f8f8;
+    }
+
     #banner {
         position: relative;
         color: #fff;
         text-align: center;
+        border-top: solid 1px #222628;
+        box-shadow: inset 0px 1px 0px 0px #3e484a;
         padding: 30px 30px 15px 30px;
         margin-top: 44px;
     }
@@ -1949,95 +2089,34 @@ section > :last-child,
         transform: translateX(0);
     }
 
+    .kpop-fandom {
+        top: 29px;
+        bottom: 0;
+        left: 68px;
+    }
+
+    .circle {
+        top: 0.5px;
+        left: 0.5px;
+        width: 55px;
+        height: 55px;
+      }
+      
+      .top-semicircle {
+        width: 57px;
+        height: 28px;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        border-width: 3.5px;
+      }
+      
+      .bottom-semicircle {
+        top: 27.5px;
+        width: 57px;
+        height: 28px;
+        border-bottom-left-radius: 28px;
+        border-bottom-right-radius: 28px;
+        border-width: 3.5px;
+      }
 }
-
-#callback {
-    width: 300px;
-    height: 250px;
-    background-color: slategrey;
-    position: absolute;
-    bottom: 30px;
-}
-
-#callback p {
-    color: #fff;
-    padding: 7px;
-}
-
-#callback:after {
-    content: 'Обратная связь';
-    background-color: darkgrey;
-    text-align: center;
-    border-radius: 0 0 8px 8px;
-    padding: 5px 0;
-    width: 150px;
-    position: absolute;
-    left: 300px;
-    transform: rotate(-90deg);
-    transform-origin: 0 0;
-}
-
-#callback {
-    width: 300px;
-    height: 150px;
-    background-color: grey;
-    position: fixed;
-    bottom: 14px;
-    transform: translateX(-100%);
-}
-
-#callback:hover {
-    transform: translateX(0%);
-    transition: all 0.7s ease;
-}
-
-.kpop-fandom {
-  position: flex;
-  width: 0px;
-  height: 0px;
-}
-
-.circle {
-  position: absolute;
-  top: 77px;
-  left: 250px;
-  transform: translate(-50%, -50%);
-  width: 77px;
-  height: 77px;
-  border-radius: 50%;
-  background-color: purple;
-
-}
-
-.letter-b {
-    position: relative;
-    width: 100px;
-    height: 150px;
-  }
-
-
-
-  .top-semicircle {
-    position: absolute;
-    top: 39px;
-    left: 211px;
-    width: 80px;
-    height: 40px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border: 5px solid #8e0ed8; 
-    border-bottom: 0;
-  }
-
-  .bottom-semicircle {
-    position: absolute;
-    bottom: 34px;
-    left: 211px;
-    width: 80px;
-    height: 40px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    border: 5px solid #521cd1; 
-    border-top: 0;
-  }
 
